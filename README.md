@@ -56,5 +56,6 @@ Then visit http://localhost:8000
 
 🌐 Live Demo
 
-👉 Weatherly AI — Live App
+👉 https://anuragkataria15.github.io/Weatherly-AI/
+
 
