@@ -31,31 +31,3 @@ It provides real-time weather updates *and* AI-generated smart advice on what to
 # 🔹 1. Clone the repository
 git clone https://github.com/anuragkataria15/weatherly-ai.git
 cd weatherly-ai
-
-# 🔹 2. Add your API keys
-
-Open script.js and replace the placeholders:
-
-const API_KEY = "YOUR_OPENWEATHER_API_KEY";
-const GEMINI_API_KEY = "YOUR_GEMINI_API_KEY";
-
-
-🌤️ Get a free weather API key here → https://openweathermap.org/api
-
-🤖 Get a free Gemini API key here → https://aistudio.google.com
-
-# 🔹 3. Run locally
-
-Simply open index.html in your browser
-or start a local server:
-
-python -m http.server
-
-
-Then visit http://localhost:8000
-
-🌐 Live Demo
-
-👉 https://anuragkataria15.github.io/Weatherly-AI/
-
-

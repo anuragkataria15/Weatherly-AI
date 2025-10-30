@@ -1,8 +1,7 @@
 // === API KEYS ===
-const API_KEY = "YOUR_API_KEY_HERE";
-const GEMINI_API_KEY = "YOUR_GEMINI_API_KEY_HERE";
+const API_KEY = "eafccd29e21d291eb7861e66a85d07f3"; // OpenWeather
+const GEMINI_API_KEY = "AIzaSyDUlVxxqFTeWru1awdBA-V8u4pLjwJEKQI"; // Gemini
 const GEMINI_MODEL = "gemini-2.5-flash-preview-09-2025";
-
 
 // === DOM ELEMENTS ===
 const cityInput = document.getElementById("city-input");
@@ -134,4 +133,3 @@ function getWeatherIcon(code) {
   };
   return `<div class="text-6xl">${icons[code] || "☁️"}</div>`;
 }
-
