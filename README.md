@@ -32,7 +32,7 @@ It provides real-time weather updates *and* AI-generated smart advice on what to
 git clone https://github.com/anuragkataria15/weatherly-ai.git
 cd weatherly-ai
 
-🔹 2. Add your API keys
+# 🔹 2. Add your API keys
 
 Open script.js and replace the placeholders:
 
@@ -44,7 +44,7 @@ const GEMINI_API_KEY = "YOUR_GEMINI_API_KEY";
 
 🤖 Get a free Gemini API key here → https://aistudio.google.com
 
-🔹 3. Run locally
+# 🔹 3. Run locally
 
 Simply open index.html in your browser
 or start a local server:
@@ -57,3 +57,4 @@ Then visit http://localhost:8000
 🌐 Live Demo
 
 👉 Weatherly AI — Live App
+
