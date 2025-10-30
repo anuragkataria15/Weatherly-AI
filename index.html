@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Weatherly AI | Smart Weather App</title>
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body class="bg-gradient-to-br from-blue-400 to-purple-600 min-h-screen flex items-center justify-center p-4">
+  <div class="w-full max-w-md bg-white/30 backdrop-blur-lg rounded-2xl shadow-2xl p-6 text-white">
+    
+    <!-- Messages -->
+    <div id="api-key-message" class="hidden p-3 bg-red-500/80 rounded-lg mb-4 text-center font-semibold">
+      <p><strong>Welcome!</strong> Please add your OpenWeatherMap API key in <code>script.js</code>.</p>
+    </div>
+
+    <div id="gemini-key-message" class="hidden p-3 bg-yellow-500/80 rounded-lg mb-4 text-center font-semibold text-black">
+      <p><strong>Gemini Feature Locked!</strong> Add your Google AI Studio API key in <code>script.js</code>.</p>
+    </div>
+
+    <!-- Search -->
+    <div class="flex space-x-2 mb-4">
+      <input id="city-input" type="text" placeholder="Enter city name..." 
+        class="flex-grow p-3 rounded-xl bg-white/20 placeholder-white/70 focus:outline-none focus:ring-2 focus:ring-white/80 transition" />
+      <button id="search-btn" class="bg-white/90 text-blue-600 font-bold p-3 rounded-xl hover:bg-white transition shadow-md">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2"
+          stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="11" cy="11" r="8"></circle>
+          <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+        </svg>
+      </button>
+    </div>
+
+    <!-- Weather Display -->
+    <div id="weather-display" class="text-center">
+      <div id="welcome-message" class="py-10">
+        <h2 class="text-2xl font-semibold">Get the Weather</h2>
+        <p class="text-white/80">Enter a city to get started</p>
+      </div>
+
+      <div id="loader" class="hidden py-10 flex justify-center">
+        <div class="loader"></div>
+      </div>
+
+      <div id="error-message" class="hidden py-10">
+        <h3 class="text-2xl font-bold text-red-300">Error</h3>
+        <p id="error-text" class="text-white/90">City not found. Please try again.</p>
+      </div>
+
+      <!-- Results -->
+      <div id="weather-results" class="hidden">
+        <h2 id="city-name" class="text-4xl font-bold mb-2"></h2>
+        <div class="flex items-center justify-center space-x-4 my-4">
+          <div id="weather-icon" class="w-24 h-24"></div>
+          <div id="temperature" class="text-7xl font-extrabold"></div>
+        </div>
+        <p id="description" class="text-2xl font-medium capitalize mb-6"></p>
+        <div class="grid grid-cols-2 gap-4 bg-white/20 p-4 rounded-xl">
+          <div class="text-center">
+            <p class="text-sm font-medium text-white/80">Humidity</p>
+            <p id="humidity" class="text-2xl font-semibold"></p>
+          </div>
+          <div class="text-center">
+            <p class="text-sm font-medium text-white/80">Wind Speed</p>
+            <p id="wind" class="text-2xl font-semibold"></p>
+          </div>
+        </div>
+
+        <!-- Gemini AI Section -->
+        <div id="gemini-section" class="mt-6">
+          <button id="gemini-btn"
+            class="hidden w-full bg-gradient-to-r from-purple-500 to-pink-500 text-white font-semibold p-3 rounded-xl shadow-lg transition-transform hover:scale-105">
+            ✨ Get Smart Advice
+          </button>
+          <div id="gemini-advice-box" class="hidden"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
